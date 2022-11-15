@@ -1,0 +1,196 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Registration">
+
+
+    <TextView
+        android:id="@+id/header_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="24dp"
+        android:fontFamily="@font/sf_pro_display_medium"
+        android:text="@string/bold_register"
+        android:textColor="@color/MainColor"
+        android:textSize="40dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.118"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <EditText
+        android:id="@+id/editTextEmailReg"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_marginLeft="40dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginRight="40dp"
+        android:background="@drawable/text_box"
+        android:ems="10"
+        android:fontFamily="@font/sf_pro_display_medium"
+        android:hint="   Enter Email / Phone Number"
+        android:inputType="textPersonName"
+        android:textColor="@color/MainColor"
+        android:textColorHint="@color/MainColor"
+        android:textSize="15dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.45"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/editTextFullNameReg" />
+
+    <EditText
+        android:id="@+id/editTextFullNameReg"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_marginLeft="40dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginRight="40dp"
+        android:background="@drawable/text_box"
+        android:ems="10"
+        android:fontFamily="@font/sf_pro_display_medium"
+        android:hint="   Full name"
+        android:inputType="textPersonName"
+        android:textColor="@color/MainColor"
+        android:textColorHint="@color/MainColor"
+        android:textSize="15dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/header_title" />
+
+    <EditText
+        android:id="@+id/editTextConfirmPasswordReg"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_marginLeft="40dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginRight="40dp"
+        android:background="@drawable/text_box"
+        android:ems="10"
+        android:fontFamily="@font/sf_pro_display_medium"
+        android:hint="  Confirm Password"
+        android:inputType="textPassword"
+        android:textColor="@color/MainColor"
+
+        android:textColorHint="@color/MainColor"
+        android:textSize="15dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.45"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/editTextPasswordReg" />
+
+    <EditText
+        android:id="@+id/editTextPasswordReg"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_marginLeft="40dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginRight="40dp"
+        android:background="@drawable/text_box"
+        android:ems="10"
+        android:fontFamily="@font/sf_pro_display_medium"
+        android:hint="  Password"
+        android:inputType="textPassword"
+        android:textColor="@color/MainColor"
+        android:textColorHint="@color/MainColor"
+
+        android:textSize="15dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/editTextEmailReg" />
+
+
+    <CheckBox
+        android:id="@+id/checkBoxAgree"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="12dp"
+        android:fontFamily="@font/sf_pro_display_medium"
+        android:minHeight="48dp"
+        android:text="@string/agree"
+        android:textColor="@color/MainColor"
+        android:theme="@style/MyRadioButton"
+        app:layout_constraintStart_toStartOf="@+id/editTextPasswordReg"
+        app:layout_constraintTop_toBottomOf="@+id/editTextConfirmPasswordReg" />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/buttonRegister"
+        android:layout_width="fill_parent"
+        android:layout_height="50dp"
+        android:layout_marginLeft="40dp"
+        android:layout_marginTop="12dp"
+        android:layout_marginRight="40dp"
+        android:background="@drawable/button"
+        android:text="@string/bold_register"
+        android:textColor="@color/MainColor"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/checkBoxAgree" />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/buttonLoginFacebook"
+        android:layout_width="130dp"
+        android:layout_height="50dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginEnd="8dp"
+        android:background="@drawable/button"
+        android:onClick="goFacebook"
+        android:text="facebook"
+        android:textColor="@color/MainColor"
+        app:layout_constraintBottom_toTopOf="@+id/textViewGoToAutorization"
+        app:layout_constraintEnd_toEndOf="@id/editTextEmailReg"
+        app:layout_constraintHorizontal_weight="1"
+        app:layout_constraintTop_toBottomOf="@+id/textView4"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <TextView
+        android:id="@+id/textView4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="12dp"
+        android:fontFamily="@font/sf_pro_display_medium"
+        android:text="OR"
+        android:textColor="@color/MainColor"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/buttonRegister" />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/buttonLoginGoogle"
+        android:layout_width="130dp"
+        android:layout_height="50dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="20dp"
+        android:background="@drawable/button"
+        android:onClick="goGoogle"
+        android:text="google"
+        android:textColor="@color/MainColor"
+        app:layout_constraintBottom_toTopOf="@+id/textViewGoToAutorization"
+        app:layout_constraintStart_toStartOf="@id/editTextEmailReg"
+        app:layout_constraintTop_toBottomOf="@+id/textView4"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.5" />
+
+    <TextView
+        android:id="@+id/textViewGoToAutorization"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="16dp"
+        android:fontFamily="@font/sf_pro_display_medium"
+        android:text="@string/lets_login"
+        android:textColor="@color/MainColor"
+        android:onClick="goAuto"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

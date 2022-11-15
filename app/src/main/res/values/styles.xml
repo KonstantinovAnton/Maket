@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+
+    <style name="MyRadioButton" parent="Theme.AppCompat.NoActionBar">
+        <item name="colorControlNormal">@color/MainColor</item>
+        <item name="colorControlActivated">@color/MainColor</item>
+
+
+    </style>
+
+    <style name="MyButton" parent="@style/Widget.AppCompat.Button.Colored">
+        <item name="colorButtonNormal">@color/MainColor</item>
+        <item name="colorControlHighlight">@color/purple_200</item>
+        <item name="cornerRadius">50dp</item>
+    </style>
+
+
+</resources>

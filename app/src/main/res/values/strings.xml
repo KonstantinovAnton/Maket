@@ -1,0 +1,10 @@
+<resources>
+    <string name="app_name">Maket</string>
+    <string name="no_acc">Dont’ have an account? Let’s <b>Register</b></string>
+    <string name="bold_login"><b>Login</b></string>
+    <string name="bold_register"><b>Register</b></string>
+    <string name="agree"><b>I agree with terms and conditions</b></string>
+    <string name="lets_login">Already registered? Let’s <b>Login</b></string>
+
+
+</resources>
