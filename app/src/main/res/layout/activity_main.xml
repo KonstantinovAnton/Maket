@@ -22,8 +22,10 @@
         app:layout_constraintTop_toTopOf="parent" />
 
 
+
     <EditText
         android:id="@+id/editTextEmailReg"
+        android:padding="10dp"
         android:layout_width="match_parent"
         android:layout_height="50dp"
         android:layout_marginTop="48dp"
@@ -33,7 +35,7 @@
         android:ems="10"
         android:fontFamily="@font/sf_pro_display_medium"
         android:inputType="textPersonName"
-        android:hint="   Enter Email / Phone Number"
+        android:hint="Enter Email / Phone Number"
         android:textColor="@color/MainColor"
         android:textSize="15dp"
         android:textColorHint="@color/MainColor"
@@ -43,37 +45,59 @@
         app:layout_constraintTop_toBottomOf="@+id/header_title" />
 
 
-    <EditText
-        android:id="@+id/editTextPasswordReg"
+    <com.google.android.material.textfield.TextInputLayout
         android:layout_width="match_parent"
-        android:layout_height="50dp"
-        android:layout_marginLeft="40dp"
-        android:layout_marginTop="16dp"
-        android:layout_marginRight="40dp"
-        android:background="@drawable/text_box"
-        android:ems="10"
-        android:fontFamily="@font/sf_pro_display_medium"
-        android:inputType="textPassword"
-        android:hint="  Password"
-        android:textColor="@color/MainColor"
-        android:textSize="15dp"
+        android:id="@+id/pp"
+        android:layout_height="76dp"
+        tools:layout_editor_absoluteX="-5dp"
+        tools:layout_editor_absoluteY="292dp"
+        app:layout_constraintTop_toBottomOf="@id/editTextEmailReg"
+        tools:ignore="MissingConstraints"
+        android:textColorHint="@drawable/text"
+        app:passwordToggleEnabled="true"
+        app:passwordToggleTint="@color/MainColor"
+        android:background="@color/white"
+        app:boxStrokeWidth="0dp"
+        app:boxStrokeWidthFocused="0dp"
+        app:hintEnabled="false"
+        >
 
-        android:textColorHint="@color/MainColor"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/editTextEmailReg" />
+        <EditText
+            android:id="@+id/editTextPasswordReg"
+            android:layout_width="match_parent"
+
+            android:layout_height="50dp"
+            android:layout_marginLeft="40dp"
+            android:layout_marginTop="16dp"
+            android:layout_marginRight="40dp"
+            android:background="@drawable/text_box"
+            android:ems="10"
+            android:fontFamily="@font/sf_pro_display_medium"
+            android:hint="Password"
+            android:inputType="textPassword"
+            android:padding="10dp"
+            android:textColor="@color/MainColor"
+            android:textColorHint="@color/MainColor"
+
+            android:textSize="15dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/editTextEmailReg" />
+
+    </com.google.android.material.textfield.TextInputLayout>
+
 
     <TextView
         android:id="@+id/textForgetPass"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="8dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="40dp"
         android:fontFamily="@font/sf_pro_display_medium"
         android:text="Forget Password?"
         android:textColor="@color/MainColor"
-        app:layout_constraintEnd_toEndOf="@+id/editTextPasswordReg"
-        app:layout_constraintTop_toBottomOf="@+id/editTextPasswordReg" />
-
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/pp" />
 
     <androidx.appcompat.widget.AppCompatButton
         android:id="@+id/buttonRegister"
@@ -82,7 +106,7 @@
         android:layout_marginTop="32dp"
         android:background="@drawable/button"
         android:text="@string/bold_login"
-        android:textColor="@color/MainColor"
+        android:textColor="@drawable/text"
         android:layout_marginRight="40dp"
         android:layout_marginLeft="40dp"
         app:layout_constraintEnd_toEndOf="parent"
@@ -90,19 +114,21 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/checkBoxAgree" />
 
+
     <CheckBox
         android:id="@+id/checkBoxAgree"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="12dp"
+        android:layout_marginTop="4dp"
+        android:buttonTint="@color/MainColor"
         android:fontFamily="@font/sf_pro_display_medium"
+
         android:minHeight="48dp"
         android:text="Remember Password"
-        android:textColor="@color/MainColor"
+        android:textColor="@drawable/check_box"
         android:theme="@style/MyRadioButton"
-        app:layout_constraintStart_toStartOf="@+id/editTextPasswordReg"
+        app:layout_constraintStart_toStartOf="@+id/editTextEmailReg"
         app:layout_constraintTop_toBottomOf="@+id/textForgetPass" />
-
 
     <androidx.appcompat.widget.AppCompatButton
         android:id="@+id/buttonLoginFacebook"
@@ -113,7 +139,7 @@
         android:background="@drawable/button"
         android:text="facebook"
         android:onClick="goFacebook"
-        android:textColor="@color/MainColor"
+        android:textColor="@drawable/text"
         app:layout_constraintEnd_toEndOf="@id/editTextEmailReg"
         app:layout_constraintHorizontal_weight="1"
         app:layout_constraintTop_toBottomOf="@+id/textView4" />
@@ -127,7 +153,7 @@
         android:background="@drawable/button"
         android:text="google"
         android:onClick="goGoogle"
-        android:textColor="@color/MainColor"
+        android:textColor="@drawable/text"
         app:layout_constraintStart_toStartOf="@id/editTextEmailReg"
         app:layout_constraintTop_toBottomOf="@+id/textView4" />
 
@@ -156,9 +182,10 @@
         android:layout_height="wrap_content"
         android:layout_marginBottom="16dp"
         android:fontFamily="@font/sf_pro_display_medium"
+        android:minHeight="48dp"
+        android:onClick="goRegister"
         android:text="@string/no_acc"
         android:textColor="@color/MainColor"
-        android:onClick="goRegister"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent" />

@@ -5,6 +5,9 @@
     <string name="bold_register"><b>Register</b></string>
     <string name="agree"><b>I agree with terms and conditions</b></string>
     <string name="lets_login">Already registered? Let’s <b>Login</b></string>
+    <string name="app_name_header"><b>App Name</b></string>
+    <string name="product">Product of <b>Team Name</b></string>
+    <string name="congrats"><b>Congrats!</b></string>
 
 
 </resources>

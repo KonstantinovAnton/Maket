@@ -37,5 +37,8 @@ public class Registration extends AppCompatActivity {
     public void goAuto(View v){
         startActivity(new Intent(this, MainActivity.class));
     }
+    public void goMainPage(View v){
+        startActivity(new Intent(this, MainPage.class));
+    }
 
 }
